@@ -1,7 +1,6 @@
-# The verison of R used is 3.6.1。 
+# The version of R used is 3.6.1。 
 #Read listings_detail.csv file
-df<-read.csv(file.choose(),encoding="UTF-8",stringsAsFactors=F)
-
+df<-read.csv("listing_detail.csv",encoding="UTF-8",stringsAsFactors=F)
 #Query the data that is not listed in the wrong column
 df2<-subset(df,(df$instant_bookable=="t"|df$instant_bookable=="f"|df$instant_bookable=="") & 
               (df$host_has_profile_pic=="t"|df$host_has_profile_pic=="f"|df$host_has_profile_pic=="") &
@@ -12,8 +11,6 @@ df2$number_of_reviews<-as.numeric(df2$number_of_reviews)
 #Query data with number_of_reviews greater than 0
 df3<-subset(df2,df2$number_of_reviews>0)
 dim(df3)
-
-
 #Delete columns with too many missing values
 re<-numeric(74)
 for(i in 1:74){
@@ -23,8 +20,6 @@ re
 df4<-df3[,-which(re>0.1)]
 #Output deleted column names
 names(df3)[which(re>0.1)]
-
-
 #Delete columns with only one level factor
 re<-numeric(63)
 for(i in 1:63){
@@ -38,8 +33,6 @@ names(df4)[which(re<=1)]
 del<-c("listing_url","picture_url","host_id","host_url","host_name","host_since",
        "host_thumbnail_url","host_picture_url","first_review","last_review")
 df6<-df5[,!(names(df5)%in%del)]
-
-
 #Texts which need to do text analysis
 #amenities
 #property_type
@@ -67,8 +60,6 @@ keywordmarix3<-as.matrix(keywordmatrix2)
 dim(keywordmarix3)
 #Delete text information column
 df7<-df6[,-c(2,3,4,8,14,20)]
-
-
 #bathrooms_text needs special processing of text information
 unique(df7$bathrooms_text)
 library(stringr)
@@ -77,8 +68,6 @@ df7$bathclass<-ifelse(str_detect(df7$bathrooms_text,"share"),1,0)
 df7$price<-as.numeric(str_replace_all(df7$price,"\\$|,",""))
 #Delete the bathrooms_text column
 df8<-df7[,-12]
-
-
 #Change the order of the columns to make the factor type and the data set separate
 df8<-df8[,c(1,2,5:7,37,10,3:4,8:9,11:26,28:36,38:44,27)]
 #Turn to factor variable
@@ -88,7 +77,6 @@ for(i in 8:41){df8[,i]<-as.numeric(df8[,i])}
 #Merge data set and word frequency matrix
 df9<-cbind(df8,keywordmarix3)
 keywordmarix3[1:100,1:6]
-
 #Delete lines with missing values
 df10<-na.omit(df9)
 dim(df10)
@@ -97,8 +85,6 @@ df10$number_of_reviews<-rep(c(1,0),c(100,10120))
 names(df10)[44]<-"istop100"
 df10<-df10[sample(nrow(df10),nrow(df10)),]
 write.csv(df10,"cleaned_data.csv",row.names=F)
-
-
 #Read cleaned_data.csv file
 df<-read.csv("cleaned_data.csv")
 dim(df)
@@ -141,20 +127,16 @@ for(i in 45:434){
   })
   dev.off()
 }
-
-
 #Load drawing-related packages
 library(jsonlite)
-install.packages("tidyverse")
 library(tidyverse)
 library("jsonlite")
 library("ggplot2")
 library(plyr)
 library(dplyr)
-install.packages("leaflet")
 library(leaflet)
-#Read map data neighborhood.geojson
-geoData2 <- readLines(file.choose(),warn=FALSE) %>%
+#Read map data neighborhoods.geojson
+geoData2 <- readLines("neighbourhoods.geojson",warn=FALSE) %>%
   paste(collapse = "\n")%>%fromJSON(simplifyVector = FALSE)
 #Non-top100 points
 other <- df %>% 
@@ -169,8 +151,6 @@ leaflet() %>% setView(lng = 151.1, lat = -33.8,zoom=10) %>%
   addCircleMarkers(lng = top_100$longitude, lat = top_100$latitude, radius = 3, 
                    stroke = FALSE,color = "red",fillOpacity = 0.9, group = "Top 100")%>%
   addGeoJSON(geoData2)
-
-
 #Use random number seed 123 for stratified sampling
 dfistop100<-subset(df,df$istop100==1)
 dfnotop100<-subset(df,df$istop100==0)
@@ -180,7 +160,6 @@ set.seed(123)
 sam2<-sample(nrow(dfnotop100),nrow(dfnotop100)*0.6)
 dftrain<-rbind(dfistop100[sam1,],dfnotop100[sam2,])
 dftest<-rbind(dfistop100[-sam1,],dfnotop100[-sam2,])
-
 library(gbm)
 modelgbm<-gbm(istop100~.,dftrain[,-1],distribution = "bernoulli",interaction.depth=6,
               shrinkage=0.01,n.trees=500,n.cores=6,cv.fold=3)
@@ -198,4 +177,3 @@ ma<-table(dftest$istop100,ifelse(pretest>bestdd,1,0))
 ma
 sum(diag(ma))/sum(ma)
 coords(roc1,"best")
-
