@@ -33,8 +33,9 @@ re
 df5<-df4[,-which(re<=1)]
 #Output deleted column names
 names(df4)[which(re<=1)]
+#Meaningless column
 del<-c("listing_url","picture_url","host_id","host_url","host_name","host_since",
-       "host_thumbnail_url","host_picture_url","first_review","last_review")#没有意义的列
+       "host_thumbnail_url","host_picture_url","first_review","last_review")
 df6<-df5[,!(names(df5)%in%del)]
 
 
@@ -84,8 +85,8 @@ for(i in 2:7){df8[,i]<-as.factor(df8[,i])}
 #Turn to numeric variable
 for(i in 8:41){df8[,i]<-as.numeric(df8[,i])}
 #Merge data set and word frequency matrix
-df9<-cbind(df8,keywordma3)
-keywordma3[1:100,1:6]
+df9<-cbind(df8,keywordmarix3)
+keywordmarix3[1:100,1:6]
 
 #Delete lines with missing values
 df10<-na.omit(df9)
