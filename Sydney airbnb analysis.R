@@ -1,16 +1,20 @@
 # The version of R used is 3.6.1。 
 #Read listings_detail.csv file
 df<-read.csv("listing_detail.csv",encoding="UTF-8",stringsAsFactors=F)
+
 #Query the data that is not listed in the wrong column
 df2<-subset(df,(df$instant_bookable=="t"|df$instant_bookable=="f"|df$instant_bookable=="") & 
               (df$host_has_profile_pic=="t"|df$host_has_profile_pic=="f"|df$host_has_profile_pic=="") &
               (df$has_availability=="t"|df$has_availability=="f"|df$has_availability==""))
 dim(df2)
+
 #Convert number_of_reviews to numeric
 df2$number_of_reviews<-as.numeric(df2$number_of_reviews)
+
 #Query data with number_of_reviews greater than 0
 df3<-subset(df2,df2$number_of_reviews>0)
 dim(df3)
+
 #Delete columns with too many missing values
 re<-numeric(74)
 for(i in 1:74){
@@ -20,6 +24,7 @@ re
 df4<-df3[,-which(re>0.1)]
 #Output deleted column names
 names(df3)[which(re>0.1)]
+
 #Delete columns with only one level factor
 re<-numeric(63)
 for(i in 1:63){
@@ -29,10 +34,12 @@ re
 df5<-df4[,-which(re<=1)]
 #Output deleted column names
 names(df4)[which(re<=1)]
+
 #Meaningless column
 del<-c("listing_url","picture_url","host_id","host_url","host_name","host_since",
        "host_thumbnail_url","host_picture_url","first_review","last_review")
 df6<-df5[,!(names(df5)%in%del)]
+
 #Texts which need to do text analysis
 #amenities
 #property_type
@@ -43,6 +50,7 @@ df6<-df5[,!(names(df5)%in%del)]
 a<-character(nrow(df6))
 #Text column merge
 for(i in c(2,3,4,8,14,20)){a<-paste(a,df6[,i],sep=" ")}
+
 #Text information processing
 library(jiebaRD)
 library(jiebaR)
@@ -85,12 +93,14 @@ df10$number_of_reviews<-rep(c(1,0),c(100,10120))
 names(df10)[44]<-"istop100"
 df10<-df10[sample(nrow(df10),nrow(df10)),]
 write.csv(df10,"cleaned_data.csv",row.names=F)
+
 #Read cleaned_data.csv file
 df<-read.csv("cleaned_data.csv")
 dim(df)
 summary(df)
 str(df)
 library(ggplot2)
+
 #Factor Drawing
 for(i in 2:7){
   png(paste(i,names(df)[i],".png",sep=""))
@@ -100,6 +110,7 @@ for(i in 2:7){
   })
   dev.off()
 }
+
 #Numerical variables
 for(i in 8:43){
   png(paste(i,".0",names(df)[i],".png",sep=""))
@@ -109,6 +120,7 @@ for(i in 8:43){
   })
   dev.off()
 }
+
 #Logarithmic Numerical Variables
 for(i in c(8,9,13,15,16,18,19,20,21,22,23,29,37,38,39,40,42)){
   png(paste(i,".1",names(df)[i],".png",sep=""))
@@ -127,6 +139,7 @@ for(i in 45:434){
   })
   dev.off()
 }
+
 #Load drawing-related packages
 library(jsonlite)
 library(tidyverse)
@@ -151,6 +164,7 @@ leaflet() %>% setView(lng = 151.1, lat = -33.8,zoom=10) %>%
   addCircleMarkers(lng = top_100$longitude, lat = top_100$latitude, radius = 3, 
                    stroke = FALSE,color = "red",fillOpacity = 0.9, group = "Top 100")%>%
   addGeoJSON(geoData2)
+
 #Use random number seed 123 for stratified sampling
 dfistop100<-subset(df,df$istop100==1)
 dfnotop100<-subset(df,df$istop100==0)
