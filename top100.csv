@@ -1,0 +1,101 @@
+id,host_is_superhost,host_has_profile_pic,host_identity_verified,neighbourhood_cleansed,instant_bookable,room_type,host_listings_count,host_total_listings_count,latitude,longitude,accommodates,bedrooms
+34006460,t,t,t,Woollahra,f,Private room,1,1,-33.87802,151.2478,2,1
+10418933,f,t,t,Waverley,t,Entire home/apt,1,1,-33.88748,151.27774,2,1
+21569903,f,t,f,Botany Bay,t,Private room,1,1,-33.95368,151.20595,2,1
+29688410,f,t,f,Woollahra,t,Hotel room,14,14,-33.84247,151.28298,2,1
+5981263,f,t,t,Leichhardt,f,Private room,1,1,-33.87971,151.1694,2,1
+20984336,f,t,t,Bankstown,t,Private room,4,4,-33.91839,151.03417,2,1
+37260366,f,t,t,Warringah,f,Entire home/apt,0,0,-33.78458,151.27288,2,1
+20623658,f,t,t,Woollahra,f,Entire home/apt,115,115,-33.87342,151.24617,8,4
+29084097,f,t,t,Pittwater,f,Entire home/apt,1,1,-33.65546,151.30988,13,4
+5708006,f,t,f,Mosman,f,Entire home/apt,1,1,-33.83059,151.24072,2,1
+40761334,f,t,f,Sydney,t,Entire home/apt,0,0,-33.89932,151.21116,4,2
+25536996,f,t,t,Holroyd,f,Entire home/apt,7,7,-33.78835,150.94855,7,3
+4607361,f,t,t,Waverley,f,Entire home/apt,1,1,-33.903,151.24817,4,2
+21111163,f,t,t,Waverley,f,Entire home/apt,1,1,-33.88344,151.27536,7,3
+27933504,f,t,f,Marrickville,f,Entire home/apt,1,1,-33.91892,151.15542,4,2
+2068981,f,t,f,Woollahra,f,Entire home/apt,1,1,-33.88788,151.26312,2,1
+6020522,t,t,t,Warringah,f,Private room,5,5,-33.75698,151.25949,2,1
+43490712,f,t,t,The Hills Shire,t,Private room,1,1,-33.73968,151.00466,2,1
+30890680,f,t,t,Sydney,t,Entire home/apt,1,1,-33.87878,151.21161,2,1
+18843931,f,t,f,Sydney,t,Entire home/apt,4,4,-33.87105,151.22339,2,1
+701670,t,t,t,Sutherland Shire,f,Entire home/apt,2,2,-34.04222,151.06819,2,1
+35240864,t,t,t,North Sydney,f,Entire home/apt,2,2,-33.84823,151.21818,2,1
+9636056,f,t,t,Sydney,f,Private room,1,1,-33.89743,151.21012,2,1
+44935188,f,t,t,City Of Kogarah,f,Private room,0,0,-33.97043,151.12618,1,1
+21253481,f,t,t,Lane Cove,t,Entire home/apt,4,4,-33.80635,151.15825,5,2
+7962273,f,t,f,Manly,f,Entire home/apt,1,1,-33.78608,151.28341,7,4
+8391032,f,t,f,Manly,f,Entire home/apt,1,1,-33.79866,151.287,4,2
+43605563,f,t,t,Waverley,f,Private room,2,2,-33.8951,151.27354,2,1
+40657766,f,t,t,City Of Kogarah,f,Entire home/apt,28,28,-33.9669,151.10072,6,2
+33912885,t,t,t,Sutherland Shire,t,Entire home/apt,2,2,-34.08404,151.1524,14,5
+38630498,f,t,t,Pittwater,f,Entire home/apt,1,1,-33.66133,151.30899,4,2
+36860431,f,t,t,Warringah,t,Entire home/apt,1,1,-33.72303,151.29683,4,2
+16897680,f,t,t,Parramatta,f,Entire home/apt,30,30,-33.82214,151.05243,4,2
+35072869,f,t,t,Sydney,t,Private room,1,1,-33.91536,151.20023,1,1
+39704072,t,t,t,Rockdale,t,Private room,3,3,-33.93288,151.126,2,1
+29189131,f,t,f,Canada Bay,f,Entire home/apt,1,1,-33.84596,151.1543,4,2
+31751477,f,t,f,Sydney,f,Entire home/apt,17,17,-33.87366,151.20668,2,1
+35139332,f,t,t,Waverley,f,Entire home/apt,2,2,-33.89089,151.2631,5,2
+29269223,f,t,t,Sydney,f,Private room,1,1,-33.87158,151.19834,1,1
+9188031,f,t,t,Waverley,f,Private room,1,1,-33.88821,151.26276,2,1
+19684287,f,t,t,Warringah,f,Entire home/apt,1,1,-33.75385,151.29504,6,3
+31812912,f,t,t,Sydney,t,Entire home/apt,11,11,-33.85742,151.20277,4,2
+41135503,t,t,t,Ryde,t,Entire home/apt,0,0,-33.81712,151.08943,2,1
+8475553,f,t,t,Marrickville,f,Entire home/apt,1,1,-33.88931,151.15421,4,2
+35053863,f,t,f,Sydney,f,Entire home/apt,1,1,-33.88539,151.20176,4,1
+26907878,t,t,t,Woollahra,f,Private room,2,2,-33.88266,151.22775,1,1
+41011868,f,t,t,Ryde,f,Entire home/apt,17,17,-33.78064,151.11427,3,1
+9465739,f,t,f,Randwick,f,Private room,1,1,-33.94594,151.25355,2,1
+29945343,f,t,t,Mosman,t,Entire home/apt,1,1,-33.82251,151.2455,4,2
+287388,f,t,t,Sydney,f,Entire home/apt,1,1,-33.8989,151.19824,4,2
+41067542,f,t,f,Pittwater,t,Entire home/apt,1,1,-33.63234,151.33042,2,1
+4138110,f,t,t,Ryde,t,Private room,1,1,-33.81454,151.10404,1,1
+16044705,f,t,f,Woollahra,f,Private room,1,1,-33.88556,151.23379,2,1
+41182695,f,t,t,Randwick,f,Entire home/apt,0,0,-33.91618,151.25836,4,2
+31812511,f,t,t,Sydney,t,Entire home/apt,11,11,-33.85701,151.20134,2,1
+18726722,f,t,f,City Of Kogarah,t,Entire home/apt,1,1,-33.97213,151.11658,4,2
+23006066,f,t,t,Liverpool,t,Private room,1,1,-33.93061,150.9305,4,1
+10047615,f,t,t,Sydney,t,Entire home/apt,1,1,-33.9194,151.19724,4,1
+9975986,f,t,t,Waverley,f,Entire home/apt,1,1,-33.88972,151.27291,4,1
+24163119,t,t,f,Sydney,t,Private room,4,4,-33.88506,151.20171,2,1
+25519521,f,t,t,Woollahra,f,Entire home/apt,1,1,-33.88681,151.26356,4,2
+28467511,t,t,t,Sydney,f,Private room,2,2,-33.87256,151.18298,1,2
+16714990,f,t,t,Sydney,f,Shared room,5,5,-33.88322,151.21082,1,1
+26455142,f,t,t,Parramatta,t,Entire home/apt,2,2,-33.80011,150.97202,6,3
+13142535,t,t,f,Warringah,t,Entire home/apt,1,1,-33.76048,151.20067,2,1
+40867518,f,t,t,North Sydney,t,Entire home/apt,0,0,-33.83708,151.22061,3,1
+1869653,f,t,t,Leichhardt,f,Entire home/apt,2,2,-33.86772,151.17141,2,1
+29928818,f,t,f,Woollahra,t,Entire home/apt,1,1,-33.89026,151.25051,2,1
+28895252,f,t,t,Marrickville,f,Entire home/apt,0,0,-33.89491,151.17311,6,3
+29199528,t,t,t,Marrickville,f,Entire home/apt,2,2,-33.89493,151.15588,2,1
+33143631,t,t,t,Warringah,t,Entire home/apt,1,1,-33.72869,151.29779,6,2
+13148740,f,t,t,Sydney,f,Entire home/apt,2,2,-33.8666,151.21006,4,1
+35295755,f,t,f,Sydney,t,Entire home/apt,2,2,-33.90499,151.20969,4,2
+4674109,t,t,t,Sydney,f,Entire home/apt,1,1,-33.89202,151.21006,4,2
+9578622,f,t,f,Rockdale,f,Private room,1,1,-33.99285,151.14364,2,1
+1898289,f,t,t,Waverley,t,Private room,1,1,-33.88437,151.27646,2,1
+2594094,t,t,t,Sydney,f,Private room,2,2,-33.89191,151.2129,1,1
+19058936,t,t,t,Leichhardt,f,Private room,2,2,-33.88144,151.15273,2,1
+37722928,t,t,t,Sydney,f,Private room,0,0,-33.88249,151.21243,2,1
+28917983,f,t,t,Warringah,f,Entire home/apt,1,1,-33.77484,151.27733,6,3
+29174636,f,t,t,Penrith,f,Entire home/apt,3,3,-33.74399,150.7123,6,3
+36814333,f,t,t,Sydney,t,Private room,8,8,-33.87297,151.20426,6,1
+4279779,f,t,t,Waverley,f,Entire home/apt,1,1,-33.89217,151.25655,9,5
+25739173,f,t,f,Warringah,t,Private room,1,1,-33.75458,151.28091,2,1
+1985996,f,t,f,Waverley,f,Entire home/apt,1,1,-33.89911,151.26089,2,1
+33724769,f,t,t,Warringah,t,Entire home/apt,1,1,-33.79045,151.25147,8,4
+42261316,f,t,f,Bankstown,t,Private room,2,2,-33.92098,151.03519,2,1
+9667405,f,t,t,Sydney,f,Entire home/apt,1,1,-33.87415,151.18565,3,1
+21752834,t,t,t,Warringah,f,Private room,2,2,-33.78397,151.28337,2,1
+24481363,f,t,t,Marrickville,t,Private room,1,1,-33.90962,151.17738,2,1
+1942100,t,t,t,Waverley,f,Entire home/apt,1,1,-33.90598,151.26684,10,5
+1901464,f,t,t,Pittwater,f,Entire home/apt,1,1,-33.67352,151.31414,6,3
+41321180,f,t,t,Randwick,f,Entire home/apt,18,18,-33.92233,151.25125,4,2
+9016480,f,t,t,Bankstown,t,Private room,3,3,-33.96082,150.98268,2,1
+14918324,f,t,t,Manly,t,Entire home/apt,169,169,-33.8091,151.25506,8,4
+29662276,f,t,f,Burwood,t,Private room,5,5,-33.87829,151.10324,1,1
+29422208,f,t,t,Leichhardt,t,Entire home/apt,28,28,-33.8729,151.17407,6,3
+4646939,t,t,f,Woollahra,f,Entire home/apt,1,1,-33.88346,151.22924,4,2
+2406577,f,t,f,Waverley,f,Entire home/apt,1,1,-33.87487,151.27554,5,3
+15219798,f,t,f,Canada Bay,t,Private room,1,1,-33.83286,151.08419,1,1
