@@ -1,3 +1,4 @@
+# The verison of R used is 3.6.1。 
 #Read listings_detail.csv file
 df<-read.csv(file.choose(),encoding="UTF-8",stringsAsFactors=F)
 
